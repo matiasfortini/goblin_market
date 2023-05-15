@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/style.css">
+</head>
+
+<body class="bodyLogReg">
+	
+    
+    <div class="container" id="container">
+
+		<div class="formContainer registerContainer">
+			<form action="#">
+				<h1>Registrate</h1>
+				<input type="text" placeholder="Nombre">
+				<input type="email" placeholder="Email">
+				<input type="password" placeholder="Contraseña">
+				<button>Registrarme</button>
+			</form>
+		</div>
+	
+		<div class="formContainer loginContainer">
+			<form action="#">
+				<h1>Ingresar</h1>
+				<input type="email" placeholder="Email">
+				<input type="password" placeholder="Contraseña">
+				<div class="content">
+					<div class="checkbox">
+						<input type="checkbox" name="checkbox" id="checkbox">
+						<label>Recordarme</label>
+					</div>					
+				</div>
+				<button>Ingresar</button>
+                <div class="passLink">
+                    <a href="#">Perdiste tu contraseña?</a>
+                </div>
+			</form>
+		</div>
+	
+		<div class="overlayContainer">
+            <div class="overlay">
+              <div class="overlayPanel overlayLeft">
+                <h1 class="title">Hola amigo!</h1>
+                <p>Si tenes una cuenta, inicia sesión acá</p>
+                <button class="ghost" id="login">Ingresar</button>
+              </div>
+              <div class="overlayPanel overlayRight">
+                <h1 class="title">Comenzá tu aventura ahora!</h1>
+                <p>Si aún no tenés una cuenta, unite a nosotros y comenzá tu viaje.</p>
+                <button class="ghost" id="register">Registrate</button>
+              </div>
+            </div>
+          </div>
+	</div>
+
+
+    
+	  
+	  
+	
+    <script src="../js/log_reg.js"></script>
+</body>
+</html>
