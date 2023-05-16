@@ -242,3 +242,11 @@ button:active {
   transform: translateX(20%);
 }
 
+/* --------- BACK --------- */
+
+header {
+  background-color: #103231;
+  width: 15%;
+  height: 100vh;
+
+}
