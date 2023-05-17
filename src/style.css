@@ -5,7 +5,23 @@
     font-family: "Dosis";
 }
 
-/* ------------- LOGIN ADMIN ------------- */
+button {
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid #a0b743;
+    background-color: #a0b743;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px;
+    padding: 12px 80px;
+    letter-spacing: 3px;
+    transition: 0.3s ease-in-out;
+}
+  
+button:active {
+    transform: scale(0.95);
+}
 
 /* HEADER */
 header {
@@ -55,7 +71,8 @@ header .backButton:hover {
     color: #103231;
 }
 
-/* FORM */
+/* ------------- LOGIN ADMIN FORM ------------- */
+
 .mainAdminLogin {
     height: 88vh;
     display: flex;
@@ -112,24 +129,6 @@ header .backButton:hover {
     width: 100%;
 }
 
-.loginForm form button {
-    position: relative;
-    border-radius: 20px;
-    border: 1px solid #a0b743;
-    background-color: #a0b743;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-    margin: 10px;
-    padding: 12px 80px;
-    letter-spacing: 3px;
-    transition: 0.3s ease-in-out;
-}
-  
-button:active {
-    transform: scale(0.95);
-}
-
 .loginForm .socialForm {
     width: 40%;
     display: flex;
@@ -144,4 +143,98 @@ button:active {
 .loginForm .socialForm i:hover {
     transform: scale(1.20);
     color: #dbe3bc;
+}
+
+/* ------------- ADMIN - PRODUCT FORM ------------- */
+
+.mainAdmin {
+    border: 1px solid red;
+    display: flex;
+    height: 88vh;
+}
+
+.newProductForm {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newProductForm h1 {
+    font-size: 34px;
+    margin-top: 60px;
+}
+
+.newProductForm .newProduct {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 40px;
+}
+
+.newProductForm .newProduct label {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+}
+
+.newProductForm .newProduct .productCategories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+} 
+
+.newProductForm .newProduct label input {
+    background-color: #eee;
+    border-radius: 10px;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+}
+
+.newProductForm .newProduct label select {
+    background-color: #eee;
+    border-radius: 10px;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    color: grey;
+}
+
+.newProductForm .newProduct label select option {
+    color: black;
+}
+
+.newProductForm .newProduct .newProductBtn {
+    margin-top: 30px;
+}
+
+.containerList {
+    border: 2px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.productList {
+    border-radius: 30px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    width: 90%;
+    height: 80%;
+}
+
+.productList .productListCategories {
+    border: 2px solid red;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    /* AVERIGUAR COMO SE HACIA CON GRID */
+    height: 10%;
+}
+
+.productList .list {
+    border: 2px solid blue;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 90%;
 }

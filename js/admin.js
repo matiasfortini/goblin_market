@@ -6,7 +6,7 @@ const admins = [
 ]
 
 const loginValidation = () => {
-    const loginForm = document.querySelector("#loginForm")
+    const loginForm = document.querySelector("#form")
     loginForm.addEventListener("submit", (e) => {
         e.preventDefault();
         
@@ -24,3 +24,5 @@ const loginValidation = () => {
 }
 
 loginValidation()
+
+
