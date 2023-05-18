@@ -16,7 +16,7 @@ const loginValidation = () => {
         const foundAdmin = admins.find((admin) => admin.user === usernameInput && admin.password === passwordInput)
 
         if (foundAdmin) {
-            window.location.href = "../../pages/admin.html"
+            window.location.href = "../../pages/new_product.html"
         }else{
             console.log("problemas")
         }

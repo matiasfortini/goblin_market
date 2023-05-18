@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+
+    <main class="mainNewProduct">
+
+        <section class="modal">
+
+            <h1>Ingresar Nuevo Producto</h1>
+
+            <form class="productForm">
+
+                <label for="">
+                    <h3>Nombre del Producto</h3>
+                    <input type="text" name="productName" placeholder="Nombre del producto" required>
+                </label>
+
+                <label for="" class="productCategories">
+                    <div class="categoryOne">
+                        <h3>Marca del Producto</h3>
+                        <select name="productBrand" id="">
+                            <option value="">Seleccionar una opción</option>
+                            <option value="Pokemón">Pokemón</option>
+                            <option value="Magic">Magic</option>
+                            <option value="Yu Gi Oh!">Yu Gi Oh!</option>
+                            <option value="One Piece">One Piece</option>
+                        </select>
+                    </div>
+                    <div class="categoryTwo">
+                        <h3>Tipo de Producto</h3>
+                        <select name="productType" id="">
+                            <option value="">Seleccionar una opción</option>
+                            <option value="Booster">Booster</option>
+                            <option value="Booster Pack">Booster Pack</option>
+                            <option value="Bundle">Bundle</option>
+                            <option value="Accesorios">Accesorios</option>
+                        </select>
+                    </div>                    
+                </label>
+
+                <label for="">
+                    <h3>Precio</h3>
+                    <input type="text" name="productPrice" placeholder="Ingrese Precio" required>
+                </label>
+                
+                <label for="">
+                    <h3>Stock</h3>
+                    <input type="number" name="productStock" placeholder="Ingrese la cantidad" required>
+                </label>
+
+                <label for="">
+                    <h3>Imagen</h3>
+                    <input type="text" name="productImg" placeholder="Ingrese Link de Imagen" required>
+                </label>
+                                
+                <button type="submit" class="genericBtn">Crear Producto</button>
+
+            </form>
+
+        </section>        
+        
+    </main>
+    
+</body>
+</html>

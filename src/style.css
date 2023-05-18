@@ -81,7 +81,7 @@ header .backButton:hover {
 }
 
 .containerLoginForm {
-    background-image: url("../visual/img/a7ff97ffb4c79069250602450a00729b.jpg");
+    background-image: url("../visual/img/loginImg.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: 220%;
@@ -147,8 +147,10 @@ header .backButton:hover {
 
 /* ------------- ADMIN - PRODUCT FORM ------------- */
 
-.mainAdmin {
+.mainNewProduct {
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 88vh;
 }
 
@@ -161,51 +163,52 @@ header .backButton:hover {
 
 .newProductForm h1 {
     font-size: 34px;
-    margin-top: 30px;
 }
 
-.newProductForm .newProduct {
+.productForm {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    margin-top: 40px;
+    width: 85%;
+    margin-top: 10px;
 }
 
-.newProductForm .newProduct label {
+.productForm label {
     display: flex;
     flex-direction: column;
-    margin: 5px 0;
+    margin: 6px 0;
 }
 
-.newProductForm .newProduct .productCategories {
+.productForm label h3 {
+    margin: 5px;
+}
+
+.productForm .productCategories {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 } 
 
-.newProductForm .newProduct label input {
+.productForm label input {
     background-color: #eee;
     border-radius: 10px;
     border: none;
     padding: 12px 15px;
-    margin: 4px 0;
 }
 
-.newProductForm .newProduct label select {
+.productForm label select {
     background-color: #eee;
     border-radius: 10px;
     border: none;
     padding: 12px 15px;
-    margin: 8px 0;
     color: grey;
 }
 
-.newProductForm .newProduct label select option {
+.productForm label select option {
     color: black;
 }
 
-.newProductForm .newProduct .newProductBtn {
-    margin-top: 30px;
+.productForm .newProductBtn {
+    margin-top: 20px;
 }
 
 .containerList {
@@ -213,6 +216,7 @@ header .backButton:hover {
     justify-content: center;
     align-items: center;
     width: 70%;
+    height: 100%;
 }
 
 .scrollItems {
@@ -326,3 +330,50 @@ header .backButton:hover {
 .scrollItems .productList .prodItem .btnSlot i:hover {
     color: #dbe3bc;
 }
+
+/* MODAL */
+.containerModal {
+    display: none;
+    position: fixed;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);    
+    width: 30%;
+    height: 77%;
+    padding: 15px 15px;
+
+}
+ .modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+ }
+
+ .modal .modalButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .modal .modalButtons button {
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid #a0b743;
+    background-color: #a0b743;
+    width: 150px;;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px;
+    padding: 12px 0 ;
+    letter-spacing: 3px;
+    transition: 0.3s ease-in-out;
+ }
+
+ .modal .modalButtons button:active {
+    transform: scale(0.95);
+ }
+  
+ 
