@@ -38,63 +38,58 @@
 
                 <label for="" class="productCategories">
                     <div class="categoryOne">
-                        <h3>Línea del Producto</h3>
-                        <select name="productCategory" id="">
+                        <h3>Marca del Producto</h3>
+                        <select name="productBrand" id="">
                             <option value="">Seleccionar una opción</option>
-                            <option value="">Pokemón</option>
-                            <option value="">Magic</option>
-                            <option value="">Yu Gi Oh!</option>
-                            <option value="">One Piece</option>
+                            <option value="Pokemón">Pokemón</option>
+                            <option value="Magic">Magic</option>
+                            <option value="Yu Gi Oh!">Yu Gi Oh!</option>
+                            <option value="One Piece">One Piece</option>
                         </select>
                     </div>
                     <div class="categoryTwo">
                         <h3>Tipo de Producto</h3>
                         <select name="productType" id="">
                             <option value="">Seleccionar una opción</option>
-                            <option value="">Booster</option>
-                            <option value="">Booster Pack</option>
-                            <option value="">Bundle</option>
-                            <option value="">Accesorios</option>
+                            <option value="Booster">Booster</option>
+                            <option value="Booster Pack">Booster Pack</option>
+                            <option value="Bundle">Bundle</option>
+                            <option value="Accesorios">Accesorios</option>
                         </select>
                     </div>                    
                 </label>
 
                 <label for="">
                     <h3>Precio</h3>
-                    <input type="text" name="price" placeholder="Ingrese Precio" required>
+                    <input type="text" name="productPrice" placeholder="Ingrese Precio" required>
                 </label>
                 
                 <label for="">
                     <h3>Stock</h3>
-                    <input type="number" name="stock" placeholder="Ingrese la cantidad" required>
+                    <input type="number" name="productStock" placeholder="Ingrese la cantidad" required>
+                </label>
+
+                <label for="">
+                    <h3>Imagen</h3>
+                    <input type="text" name="productImg" placeholder="Ingrese Link de Imagen" required>
                 </label>
                                 
-                <button type="submit" class="newProductBtn">Crear Producto</button>
+                <button type="submit" class="genericBtn">Crear Producto</button>
 
             </form>
 
         </section>
 
         <section class="containerList">
-            <div class="productList">
-                <div class="productListCategories">
-                    <p>ID</p>
-                    <p>Nombre Producto</p>
-                    <p>Línea</p>
-                    <p>Tipo</p>
-                    <p>Precio</p>
-                    <p>Stock</p>
-                    <p>Editar/Borrar</p>
-                </div>
-
-                <div class="list">
-
+            <div class="scrollItems">
+                <div class="productList" id="productList">
+                        
                 </div>
             </div>
         </section>
     </main>
     
     <script src="https://kit.fontawesome.com/e6b599fc46.js" crossorigin="anonymous"></script>
-    <script src="#"></script>
+    <script src="../js/new_product.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
     font-family: "Dosis";
 }
 
-button {
+.genericBtn {
     position: relative;
     border-radius: 20px;
     border: 1px solid #a0b743;
@@ -19,7 +19,7 @@ button {
     transition: 0.3s ease-in-out;
 }
   
-button:active {
+.genericBtn:active {
     transform: scale(0.95);
 }
 
@@ -148,7 +148,6 @@ header .backButton:hover {
 /* ------------- ADMIN - PRODUCT FORM ------------- */
 
 .mainAdmin {
-    border: 1px solid red;
     display: flex;
     height: 88vh;
 }
@@ -162,7 +161,7 @@ header .backButton:hover {
 
 .newProductForm h1 {
     font-size: 34px;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .newProductForm .newProduct {
@@ -189,7 +188,7 @@ header .backButton:hover {
     border-radius: 10px;
     border: none;
     padding: 12px 15px;
-    margin: 8px 0;
+    margin: 4px 0;
 }
 
 .newProductForm .newProduct label select {
@@ -210,31 +209,120 @@ header .backButton:hover {
 }
 
 .containerList {
-    border: 2px solid green;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 70%;
 }
 
-.productList {
+.scrollItems {
     border-radius: 30px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     width: 90%;
     height: 80%;
+    padding: 15px 15px;
 }
 
-.productList .productListCategories {
-    border: 2px solid red;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    /* AVERIGUAR COMO SE HACIA CON GRID */
-    height: 10%;
+.productList::-webkit-scrollbar {
+    width: 8px;
+    
 }
 
-.productList .list {
-    border: 2px solid blue;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    height: 90%;
+.productList::-webkit-scrollbar-thumb {
+    background-color: #a0b743;
+    border-radius: 8px;
+    
+}
+
+.scrollItems .productList {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.scrollItems .productList .prodItem {
+    display: flex;
+    height: 35px;
+    margin: 10px 0;
+}
+
+.scrollItems .productList .prodItem div {
+    background-color: #eee;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 0 10px;
+    margin: 0 3px;
+}
+
+.scrollItems .productList .prodItem .idSlot {
+    width: 30px;    
+    justify-content: center;
+    
+}
+
+.scrollItems .productList .prodItem .nameSlot {
+    width: 330px;
+}
+
+.scrollItems .productList .prodItem .brandSlot, .typeSlot {
+    width:  120px;
+    justify-content: center;
+}
+
+.scrollItems .productList .prodItem .priceSlot {
+    width: 90px;
+    justify-content: center;
+}
+
+.scrollItems .productList .prodItem .stockSlot {
+    width: 50px;
+    justify-content: center;
+}
+
+.scrollItems .productList .prodItem .imgSlot {
+    width: auto;
+    padding: 0;
+}
+
+.scrollItems .productList .prodItem .imgSlot .copyLinkBtn {
+    border: none;
+    background-color: #a0b743;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    width: 60px;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.scrollItems .productList .prodItem .imgSlot .copyLinkBtn:active {
+    transform: scale(0.95);
+}
+
+.scrollItems .productList .prodItem .btnSlot {
+    background-color: transparent;
+    width: 60px;
+    display: flex;
+    margin-left: 15px;
+    padding: 0;
+}
+
+.scrollItems .productList .prodItem .btnSlot button {
+    border: none;
+    background-color: transparent;
+    margin: 0 5px;
+}
+
+.scrollItems .productList .prodItem .btnSlot i {
+    font-size: 20px;
+    color: #a0b743;
+}
+
+.scrollItems .productList .prodItem .btnSlot i:hover {
+    color: #dbe3bc;
 }
