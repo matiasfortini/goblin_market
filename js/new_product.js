@@ -58,18 +58,6 @@
                 deleteProduct(product.id);
             });
 
-            const copyLinkBtn = productSlot.querySelectorAll('.copyLinkBtn');
-            copyLinkBtn.forEach((btn) => {
-                btn.addEventListener('click', () => {
-                    const link = btn.getAttribute('data-link');
-                    navigator.clipboard.writeText(link).then(() => {
-                        alert('¡Enlace copiado al portapapeles!');
-                    }).catch((error) => {
-                        console.error('Error al copiar el enlace:', error);
-                    });
-                });
-            }); 
-
             productList.append(productSlot);
         });
     };
@@ -99,54 +87,62 @@
 
     const editProduct = (productId) => {
         const modal = document.querySelector(".containerModal");
-        modal.style.display = "block";
+        if (modal) {
+            modal.style.display = "block";
     
-        const product = products.find((p) => p.id === productId);
+            const product = products.find((p) => p.id === productId);
     
-        const form = document.querySelector(".containerModal form");
-        const productNameInput = form.elements["productName"];
-        const productBrandSelect = form.elements["productBrand"];
-        const productTypeSelect = form.elements["productType"];
-        const productPriceInput = form.elements["productPrice"];
-        const productStockInput = form.elements["productStock"];
-        const productImgInput = form.elements["productImg"];
+            const form = document.querySelector(".containerModal form");
+            const productNameInput = form.elements["productName"];
+            const productBrandSelect = form.elements["productBrand"];
+            const productTypeSelect = form.elements["productType"];
+            const productPriceInput = form.elements["productPrice"];
+            const productStockInput = form.elements["productStock"];
+            const productImgInput = form.elements["productImg"];
     
-        productNameInput.value = product.name;
-        productBrandSelect.value = product.brand;
-        productTypeSelect.value = product.type;
-        productPriceInput.value = product.price;
-        productStockInput.value = product.stock;
-        productImgInput.value = product.img;
+            if (productNameInput && productBrandSelect && productTypeSelect &&
+                productPriceInput && productStockInput && productImgInput) {
+                productNameInput.value = product.name;
+                productBrandSelect.value = product.brand;
+                productTypeSelect.value = product.type;
+                productPriceInput.value = product.price;
+                productStockInput.value = product.stock;
+                productImgInput.value = product.img;
     
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
+                const closeModalButton = document.querySelector(".closeModalBtn");
+                if (closeModalButton) {
+                    closeModalButton.addEventListener("click", () => {
+                        modal.style.display = "none";
+                    });
+                } 
     
-            const newProductName = productNameInput.value;
-            const newProductBrand = productBrandSelect.value;
-            const newProductType = productTypeSelect.value;
-            const newProductPrice = productPriceInput.value;
-            const newProductStock = productStockInput.value;
-            const newProductImg = productImgInput.value;
+                form.addEventListener("submit", (e) => {
+                    e.preventDefault();
     
-            product.name = newProductName;
-            product.brand = newProductBrand;
-            product.type = newProductType;
-            product.price = parseFloat(newProductPrice);
-            product.stock = newProductStock;
-            product.img = newProductImg;
+                    const newProductName = productNameInput.value;
+                    const newProductBrand = productBrandSelect.value;
+                    const newProductType = productTypeSelect.value;
+                    const newProductPrice = productPriceInput.value;
+                    const newProductStock = productStockInput.value;
+                    const newProductImg = productImgInput.value;
     
-            localStorage.setItem("products", JSON.stringify(products));
+                    product.name = newProductName;
+                    product.brand = newProductBrand;
+                    product.type = newProductType;
+                    product.price = parseFloat(newProductPrice);
+                    product.stock = newProductStock;
+                    product.img = newProductImg;
     
-            modal.style.display = "none";
+                    localStorage.setItem("products", JSON.stringify(products));
     
-            viewProducts();
-        });
+                    modal.style.display = "none";
     
-        const closeModalButton = document.querySelector(".closeModalBtn");
-        closeModalButton.addEventListener("click", () => {
-            modal.style.display = "none";
-        });
-    };  
+                    viewProducts();
+                });
+            } 
+        } 
+    };
+    
 
     const deleteProduct = (productId) => {
         products = products.filter((product) => product.id !== productId);
