@@ -393,3 +393,41 @@ header .backButton:hover {
     border: 2px solid blue;
     width: 85%;
  }
+
+ .productCard {
+    border: 2px solid green;
+    border-radius: 20px;
+    width: 230px;
+    height: 400px;
+ }
+
+ .productCard .imgProduct {
+    border: 2px solid cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    padding: 10px;
+ }
+
+ .productCard .imgProduct img a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+ }
+
+
+ .productCard .imgProduct img {
+    height: 90%;
+ }
+
+ .productCard .infoProduct {
+    border: 2px solid orange;
+    width: 100%;
+    height: 20%;
+ }
+
+ 
